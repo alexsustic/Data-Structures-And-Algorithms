@@ -1,0 +1,13 @@
+subalgorithm iterator()
+       nr_of_columns <-matrix.nrColumns()
+       if current_column=nr_of_columns then
+           current_column <- 0
+       end_if
+       for index=0, nr_of_columns,1 execute
+             if matrix.element(current_line, index) != NULL_TELEM then
+                 return matrix.element(current_line, index) 
+             end_if
+             current_column <- current_column + 1
+       end_for
+       next()
+end_subalgorithm
